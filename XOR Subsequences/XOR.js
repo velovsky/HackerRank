@@ -1,6 +1,6 @@
 /*
-*	This algorithm works well for test-cases: #1-#8
-* This solution needs to be improved (e.g: handle > 100k elements)
+* This algorithm works well for test-cases: #1-#8
+* The provided solution needs to be improved (e.g: handle > 100k elements)
 * in order to pass the remaining cases.
 */
 
