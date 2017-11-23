@@ -31,13 +31,13 @@ function activityNotifications(expenditure, d)
     for(var i=d; i < expenditure.length; i++)
     {
         //compute median
-        var b = expenditure.slice(); //shallow copy
-        var c = b.slice(0,i);
+        var c = expenditure.slice(); //shallow copy
+        c = c.slice(i-d,i);
         c.sort((a,b) => a-b);
-        if(i%2 === 0) //even
-            median = (c[i/2 - 1] + b[i/2]) / 2;
+        if(d%2 === 0) //even
+            median = (c[d/2 - 1] + c[d/2]) / 2;
         else //odd
-            median = c[Math.round(i/2)];
+            median = c[Math.round(d/2)];
         
         if(expenditure[i] >= 2*median)
             count++;
